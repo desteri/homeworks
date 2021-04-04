@@ -1,0 +1,169 @@
+/* Базовые настройки страницы */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #4c4a6d;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+
+/* Универсальные стили */
+.left, .ul_li li {
+    float: left;
+}
+
+.left .ul_li li:nth-child(1) {
+    padding-right: 70px;
+}
+
+.right {
+    float: right;
+}
+
+.ul_li {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.ul_li li {
+    margin: 16px 20px 11px;
+    padding-right: 20px;
+}
+
+.ul_li i {
+    margin-right: 10px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*      menu
+        top     */
+.top {
+    background-color: #f7f7f7;
+    display: inline-block;
+    width: 100%;
+}
+
+.top .ul_li li a {
+    color: #4b4c6c;
+}
+
+.top_lang, .top_curr {
+    color: #666;
+    font-weight: 500;
+}
+
+.top ul li {
+    border-right: 1px solid #dcdcdc;
+}
+
+.top ul li:last-child {
+    border-right: none;
+}
+
+.icon_msg {
+    position: relative;
+}
+
+.msg {
+    position: absolute;
+    top: -9px;
+    right: 4px;
+    background-color: #e53556;
+    padding: 3px;
+    text-align: center;
+    color: #fff;
+    font-size: 9px;
+    border-radius: 50%;
+}
+
+/*      menu
+        middle     */
+.middle {
+    list-style: none;
+}
+
+.middle__ul {
+    margin: 20px 0;
+    padding: 0;
+}
+
+.middle__ul li {
+    display: inline-block;
+    border-right: 1px solid #dcdcdc;
+    padding-left: 10px;
+}
+
+.middle__ul li:first-child, li:last-child {
+    border-right: none;
+}
+
+.block {
+    margin: 0 15px;
+    padding-right: 50px;
+}
+
+.block__icon {
+    width: 45px;
+    height: 45px;
+    float: left;
+    background-color: #f4f4f4;
+    border-radius: 50%;
+}
+
+.block__icon a {
+    color: #336;
+}
+
+.block__icon a i {
+    padding: 13px 0 0 15px;
+    font-size: 18px;
+}
+
+.block__info {
+    padding-left: 10px;
+    margin-top: 7px;
+    float: right;
+}
+
+.block__info h4 {
+    margin: 0;
+    font-size: 14px;
+    color: #4c4b6c;
+    font-weight: 500;
+}
+
+.block__info p {
+    margin: 0;
+    color: #999;
+}
+
+.logo {
+    width: 270px;
+    padding: 0 15px;
+    margin: 0;
+}
+
+.middle__ul li:nth-child(2) .block__info p span {
+    text-transform: uppercase;
+    color: #e53556;
+}
+
+.middle__ul li:nth-child(3) .block__info p span {
+    color: #ffcc33;
+}
+
+.middle__ul li:nth-child(4) .block__info p span {
+    text-transform: uppercase;
+    color: #7cd0f5;
+}

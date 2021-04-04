@@ -1,0 +1,32 @@
+.power {
+    background-color: rgb(65, 65, 175);
+}
+
+#awesome {
+    background-color: rgb(177, 104, 37);
+}
+
+.connect {
+    font-size: 30px;
+    color: snow;
+}
+
+.nation {
+    font-size: 24px;
+    color: rgb(73, 250, 73);
+}
+
+.break {
+    font-size: 36px;
+    color: rgb(136, 49, 49);
+}
+
+.union {
+    font-size: 72px;
+    color: rgb(214, 231, 54);
+}
+
+.vector {
+    font-size: 48px;
+    color: rgb(111, 209, 226);
+}

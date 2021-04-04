@@ -1,0 +1,70 @@
+меню 
+font-size: 18px;
+color: #828282;
+
+Надпись ниже меню 
+font-size: 47.3392px;
+color: #070707;
+
+border under menu 
+font-size: 18px;
+border: 1px solid #828282;
+
+текст по середине меню 
+font-size: 18px;
+line-height: 22px;
+color: #070707;
+
+вертикальный текст 
+font-size: 16px;
+line-height: 20px;
+color: #828282;
+
+секция about 
+height: 506px;
+background: #F6F6F6;
+
+текст about me 
+font-size: 34px;
+color: #070707;
+
+
+тексты внутри секции about me(description)
+font-size: 18px;
+line-height: 22px;
+
+
+
+сеция Skills
+
+font-size: 34px;
+color: #070707;
+
+текст портфолио 
+
+font-size: 34px;
+color: #070707;
+
+тексты внутри портфолио
+font-size: 18px;
+
+
+текст контакты 
+
+font-size: 34px;
+color: #070707;
+
+кнопка в секции контакты 
+background: #070707;
+
+
+текст в подвале
+font-size: 14px;
+color: #828282;
+
+ 
+
+
+
+
+

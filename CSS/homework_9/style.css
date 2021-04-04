@@ -1,0 +1,41 @@
+.menu {
+    margin: 30px 800px;
+    padding: 20px;
+    border: 1px solid red;
+}
+
+.logo {
+    margin: 30px 900px;
+    padding: 20px;
+    border: 1px solid green;
+}
+
+.main {
+    margin: 30px 50px;
+    padding: 20px;
+    border: 1px solid blue;
+}
+
+.links {
+    margin: 30px 700px;
+    padding: 20px;
+    border: 1px solid yellow;
+}
+
+.text {
+    margin: 30px 200px;
+    padding: 20px;
+    border: 1px solid pink;
+}
+
+.images {
+    margin: 30px 400px;
+    padding: 20px;
+    border: 1px solid brown;
+}
+
+footer {
+    margin: 30px 800px;
+    padding: 20px;
+    border: 1px solid gray;
+}

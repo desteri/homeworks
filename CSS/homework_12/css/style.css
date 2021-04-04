@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #828282;
+    font-weight: 700;
+    transition: .3s linear;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+.brd {
+    border-bottom: 1px solid #828282;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 30px 0 45px;
+}
+
+.title h1 {
+    font-size: 47.3392px;
+    color: #070707;
+}
+
+#center_menu {
+    font-size: 18px;
+    line-height: 22px;
+    color: #070707;
+}
+
+#vert {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 16px;
+    line-height: 20px;
+    color: #828282;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#vert span {
+    transition: .3s linear;
+}
+
+#vert span:nth-child(2):hover {
+    color: #000;
+}
+
+#vert span:nth-child(1):hover {
+    color: #000;
+}
+
+header img {
+    margin-bottom: 60px;
+}
+
+.about {
+    width: 100%;
+    height: 506px;
+    background: #F6F6F6;
+}
+
+.about_text {
+    text-align: center;
+}
+
+.about_text h2 {
+    font-size: 34px;
+    color: #070707;
+    padding-top: 112px;
+    padding-bottom: 33px;
+}
+
+.about_text p {
+    font-size: 18px;
+    line-height: 22px;
+    padding-bottom: 45px;
+}
+
+.skill {
+    width: 100%;
+    height: 612px;
+}
+
+.skills {
+    text-align: center;
+}
+
+.skills h2 {
+    padding: 90px 0 70px;
+    font-size: 34px;
+    color: #070707;
+}
+
+.skills p {
+    font-size: 18px;
+    padding-bottom: 90px;
+}
+
+.logos {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.logos li img {
+    padding-bottom: 25px;
+}
+
+.logos li p {
+    padding-bottom: 40px;
+}
+
+.logos li .star img {
+    padding: 0 5px;
+}
+
+.st {
+    padding-top: 21px;
+}
+
+.portfolio {
+    text-align: center;
+    height: 2255px;
+    background: #F6F6F6;
+}
+
+.portfolio h2 {
+    font-size: 34px;
+    color: #070707;
+    padding-top: 115px;
+    padding-bottom: 65px;
+}
+
+.job img {
+    padding-bottom: 45px;
+}
+
+.job p {
+    padding-bottom: 100px;
+}
+.job p a {
+    color: #000;
+    transition: .3s linear;
+}
+
+.job p a:hover {
+    color: #828282;
+}
+
+footer {
+    width: 100%;
+    height: 622px;
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 34px;
+    color: #070707;
+    padding-top: 115px;
+    padding-bottom: 35px;
+}
+
+footer p {
+    font-size: 18px;
+    padding-bottom: 35px;
+}
+
+#link {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    border: 0;
+    cursor: pointer;
+    background-color: #070707;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    margin-bottom: 85px;
+    transition: .3s linear;
+}
+
+#link:hover {
+    background-color: #828282;
+}
+
+footer ul li {
+    cursor: pointer;
+}
+
+.icon {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    margin-bottom: 45px;
+}
+
+.icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+#pr {
+    font-size: 14px;
+    color: #828282;
+}
+
+footer p a {
+    text-decoration: none;
+    color: #828282;
+    transition: .3s linear;
+}
+
+footer p a:hover {
+    color: #000;
+}

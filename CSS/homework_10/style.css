@@ -1,0 +1,56 @@
+.menu {
+    margin: 30px 800px;
+    padding: 20px;
+    border: 3px solid red;
+    background-color: rgb(74, 74, 255);
+    color: white;
+}
+
+.logo {
+    margin: 30px 900px;
+    padding: 20px;
+    border: 3px solid green;
+}
+
+.main {
+    margin: 30px 50px;
+    padding: 20px;
+    border: 3px solid blue;
+}
+
+.links {
+    margin: 30px 700px;
+    padding: 20px;
+    border: 3px solid yellow;
+    background-color: rgb(74, 74, 255);
+    color: white;
+}
+
+.links ol li a {
+    color: white;
+}
+
+.text {
+    margin: 30px 200px;
+    padding: 20px;
+    border: 3px solid rgb(255, 59, 92);
+    background-color: rgb(117, 65, 55);
+}
+
+.images {
+    margin: 30px 400px;
+    padding: 20px;
+    border: 3px solid brown;
+}
+
+footer {
+    margin: 30px 750px;
+    padding: 20px;
+    border: 3px solid gray;
+    background-color: black;
+    color: white;
+}
+
+footer ul li a {
+    color: white;
+}
