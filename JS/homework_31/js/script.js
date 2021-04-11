@@ -1,7 +1,7 @@
 "use strict";
 
-let raise = prompt("Введите, возводимое в степень, число:", '');
-let pow = prompt("Введите, на какую степень надо возвезти, число:", '');
+let raise = Number(prompt("Введите, возводимое в степень, число:", ''));
+let pow = Number(prompt("Введите, на какую степень надо возвезти, число:", ''));
 
 function raisePower(p, n) {
     let res = Math.pow(p, n);
@@ -12,7 +12,7 @@ function raisePower(p, n) {
 raisePower(raise, pow);
 
 
-let rad = prompt("Введите радиус:", '');
+let rad = Number(prompt("Введите радиус:", ''));
 
 function areaCircle(r) {
     let pi = 3.14;
@@ -24,8 +24,8 @@ function areaCircle(r) {
 areaCircle(rad);
 
 
-let height = prompt("Введите длину прямоугольника", '');
-let width = prompt("Введите ширину прямоугольника:", '');
+let height = Number(prompt("Введите длину прямоугольника", ''));
+let width = Number(prompt("Введите ширину прямоугольника:", ''));
 
 function areaRect(a, b) {
     let s = a * b;
