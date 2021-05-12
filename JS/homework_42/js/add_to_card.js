@@ -101,25 +101,3 @@ function updCount() {
 }
 
 addProduct();
-
-// ДЗ №42
-function menu() {
-
-    "use strict";
-    let btn = document.getElementsByClassName('mb');
-
-    let delBtn = (event) => {
-        
-        event.target.remove();
-
-    };
-
-    for(var i = 0; i < btn.length; i++) {
-
-        btn[i].addEventListener('click', delBtn);
-
-    }
-
-}
-
-menu();
