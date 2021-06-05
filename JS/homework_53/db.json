@@ -1,0 +1,19 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "Godzilla",
+            "description": "He destroyed town!"
+        },
+        {
+            "id": 2,
+            "title": "GameIndustry",
+            "description": "We want games!"
+        },
+        {
+            "id": 3,
+            "title": "Music",
+            "description": "Rock'n'Roll!"
+        }
+    ]
+}
