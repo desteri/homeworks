@@ -1,0 +1,29 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "Movie",
+            "description": "Godzilla! He is MAD!"
+        },
+        {
+            "id": 2,
+            "title": "Games",
+            "description": "Assassin's Creed Valhalla - vikings rules!"
+        },
+        {
+            "id": 3,
+            "title": "Music",
+            "description": "Rock'n'Roll takes over the world!"
+        },
+        {
+            "id": 4,
+            "title": "Anime",
+            "description": "Kimi no Na wa - amazing movie!"
+        },
+        {
+            "id": 5,
+            "title": "IT",
+            "description": "JavaScript is amazing programming language!"
+        }
+    ]
+}
