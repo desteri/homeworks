@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.list {
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 50px 0;
+    width: 500px;
+    background-color: #4b4b4b;
+}
+
+ul {
+    padding: 0;
+    text-align: center;
+    list-style-type: none;
+}
+
+li {
+    padding-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+    transition: .2s linear;
+}
+
+a:hover {
+    color: #000;
+}
+
+a:active {
+    color: #d10000;
+}
