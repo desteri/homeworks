@@ -336,35 +336,24 @@ function addUrl() {
 
     const promice = new Promise((resolve, reject) => {
 
-        let script = document.createElement('script');
-        script.setAttribute('src', 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js');
-        document.head.appendChild(script);
+        let script = document.createElement('script'),
+            script2 = document.createElement('script');
         
-        resolve(script);
+        script.setAttribute('src', 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js');
+        script2.setAttribute('src', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js');
+        
+        document.head.appendChild(script);
+        document.head.appendChild(script2);
+
+        if (script && script2) {
+            resolve('Скрипты были добавлены.');
+        } else {
+            reject('Fail!');
+        }
 
     });
 
-    promice.then(script => {
-
-        const promice2 = new Promise((resolve, reject) => {
-
-            let script2 = document.createElement('script');
-            script2.setAttribute('src', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js');
-            document.head.appendChild(script2);
-    
-            resolve(script2);
-
-        });
-
-        promice2.then(script2 => {
-
-            console.log(script2);
-
-        });
-
-        console.log(script);
-
-    });
+    promice.then((message) => console.log(message), (error) => console.log(error));
 
 }
 
