@@ -60,44 +60,54 @@ signIn();
 createTag();
 
 // ДЗ 45
-class User {
+function getStudent() {
     
-    constructor (name, surname, year) {
+    let nameStudent = prompt('Имя студента:', 'Умида'),
+        surnameStudent = prompt('Фамилия студента:', 'Шопокова'),
+        yearStudent = prompt('Год поступления:', '2017');
 
-        this.name = name;
-        this.surname = surname;
-        this.year = year;
 
+    class User {
+    
+        constructor (name, surname) {
+    
+            this.name = name;
+            this.surname = surname;
+    
+        }
+    
+        getFullName() {
+    
+            alert(`Имя студента: ${this.name}\nФамилия студента: ${this.surname}`);
+    
+        }
+    
     }
-
-    getFullName() {
-
-        alert(`Имя студента: ${this.name}\nФамилия студента: ${this.surname}`);
-
+    
+    class Student extends User{
+    
+        constructor (name, surname, year) {
+    
+            super(name, surname);
+            this.year = year;
+    
+        }
+    
+        getCourse() {
+    
+            let course = new Date().getFullYear() - this.year;
+    
+            alert(`Курс: ${course}`);
+    
+        }
+    
     }
+    
+    const univer = new Student(nameStudent, surnameStudent, yearStudent);
+    
+    univer.getFullName();
+    univer.getCourse();
 
 }
 
-class Student extends User{
-
-    constructor (name, surname, year) {
-
-        super(name, surname, year);
-
-    }
-
-    getCourse() {
-
-        let course = new Date();
-
-        alert('Курс: ' + ((+course.getFullYear()) - this.year));
-
-    }
-
-}
-
-const univer = new Student('Хьюстон', 'У нас проблемы', 2018);
-
-univer.getFullName();
-
-univer.getCourse();
+getStudent();

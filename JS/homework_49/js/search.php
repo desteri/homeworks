@@ -1,21 +1,20 @@
 <?php
 
-    
     if ($_GET['query'] == "Рубашка") {
         
-    $result = array(
-                    array(
-                        "text" => "Рубашка",
-                        "href" => "https://kg.wildberries.ru/catalog/5315031/otzyvy"
-                    ),
-                    array(
-                        "text" => "Рубашка черная",
-                        "href" => "https://kg.wildberries.ru/catalog/8572151/detail.aspx?targetUrl=XS"
-                    ),
-                    array(
-                        "text" => "Рубашка фиолетовая",
-                        "href" => "https://kg.wildberries.ru/catalog/8920388/detail.aspx?targetUrl=XS"
-                    )
+        $result = array(
+                array(
+                    "text" => "Рубашка",
+                    "href" => "https://kg.wildberries.ru/catalog/5315031/otzyvy"
+                ),
+                array(
+                    "text" => "Рубашка черная",
+                    "href" => "https://kg.wildberries.ru/catalog/8572151/detail.aspx?targetUrl=XS"
+                ),
+                array(
+                    "text" => "Рубашка фиолетовая",
+                    "href" => "https://kg.wildberries.ru/catalog/8920388/detail.aspx?targetUrl=XS"
+                )
         );
 
     } else if ($_GET['query'] == "Кофта") {
@@ -54,7 +53,7 @@
 
     } else {
 
-        $result = "Ничего не найдено!";
+        $result = array( "error" => "Ничего не найдено!");
 
     }
 
