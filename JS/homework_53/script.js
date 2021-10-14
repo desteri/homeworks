@@ -180,7 +180,7 @@ function search() {
 
         event.preventDefault();
 
-        fetch('js/search.php', {
+        fetch('search.php', {
             method: "POST",
             body: JSON.stringify({query: search.value}),
             headers: {
@@ -217,7 +217,25 @@ function jsonServer() {
 
     fetch('http://localhost:3000/posts')
     .then(data => data.json())
-    .then(res => console.log(res));
+    .then(res => {
+
+        let post = document.createElement('div');
+        post.classList.add('post__list');
+
+        for (let i = 0; i < res.length; i++) {
+        
+            post.innerHTML += `<div class="post__item">
+                                    <div class="post__title red">${res[i].title}</div>
+                                    <div class="post__desc">${res[i].description}</div>
+                                </div>
+            `;
+        
+        }
+
+        const blockPost = document.querySelector('.post');
+        blockPost.appendChild(post);
+        
+    });
 
 }
 

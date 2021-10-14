@@ -169,8 +169,6 @@ createProduct();
 
 // ДЗ 51
 // При вводе в любом из input'ов валюта конвертируется через Open Server Panel
-// Верхние функции закомментированы, потому что происходит какой-то конфликт
-// и конвертер не запускается как надо
 function exchangeCurrency() {
 
     "use strict";
@@ -181,51 +179,79 @@ function exchangeCurrency() {
 
     inputSom.addEventListener('input', () => {
 
-        fetch('js/current.json')
-        .then(response => response.json())
-        .then(json => {
-            
-            const resSomUsd = inputSom.value * json.current.somUsd;
-            const resSomRub = inputSom.value * json.current.somRub;
+        if (!parseInt(inputSom.value) || isNaN(inputSom.value)) {
 
-            inputUsd.value = (resSomUsd).toFixed(2);
-            inputRub.value = (resSomRub).toFixed(2);
+            alert('Введите число!');
+            inputSom.value = "";
+            inputUsd.value = "";
+            inputRub.value = "";
 
-            
-        });
+        } else {
+
+            fetch('js/current.json')
+            .then(response => response.json())
+            .then(json => {
+                
+                const resSomUsd = inputSom.value * json.current.somUsd;
+                const resSomRub = inputSom.value * json.current.somRub;
+
+                inputUsd.value = (resSomUsd).toFixed(2);
+                inputRub.value = (resSomRub).toFixed(2);
+
+                
+            });
+        }
 
     });
 
     inputUsd.addEventListener('input', () => {
 
-        fetch('js/current.json')
-        .then(response => response.json())
-        .then(json => {
+        if (!parseInt(inputUsd.value) || isNaN(inputUsd.value)) {
 
-            const resUsdSom = inputUsd.value * json.current.usdSom;
-            const resUsdRub = inputUsd.value * json.current.usdRub;
+            alert('Введите число!');
+            inputSom.value = "";
+            inputUsd.value = "";
+            inputRub.value = "";
 
-            inputSom.value = (resUsdSom).toFixed(2);
-            inputRub.value = (resUsdRub).toFixed(2);
+        } else {
 
-        });
+            fetch('js/current.json')
+            .then(response => response.json())
+            .then(json => {
 
+                const resUsdSom = inputUsd.value * json.current.usdSom;
+                const resUsdRub = inputUsd.value * json.current.usdRub;
+
+                inputSom.value = (resUsdSom).toFixed(2);
+                inputRub.value = (resUsdRub).toFixed(2);
+
+            });
+        }
     });
 
     inputRub.addEventListener('input', () => {
 
-        fetch('js/current.json')
-        .then(response => response.json())
-        .then(json => {
+        if (!parseInt(inputRub.value) || isNaN(inputRub.value)) {
 
-            const resRubSom = inputRub.value * json.current.rubSom;
-            const resRubUsd = inputRub.value * json.current.rubUsd;
+            alert('Введите число!');
+            inputSom.value = "";
+            inputUsd.value = "";
+            inputRub.value = "";
 
-            inputSom.value = (resRubSom).toFixed(2);
-            inputUsd.value = (resRubUsd).toFixed(2);
+        } else {
 
-        });
+            fetch('js/current.json')
+            .then(response => response.json())
+            .then(json => {
 
+                const resRubSom = inputRub.value * json.current.rubSom;
+                const resRubUsd = inputRub.value * json.current.rubUsd;
+
+                inputSom.value = (resRubSom).toFixed(2);
+                inputUsd.value = (resRubUsd).toFixed(2);
+
+            });
+        }
     });
 
 }
@@ -245,30 +271,45 @@ function search() {
 
         event.preventDefault();
 
-        fetch('js/search.php', {
-            method: "POST",
-            body: JSON.stringify({query: search.value}),
-            headers: {
-                'Content-type': 'application/json'
-            }
-        })
-        .then(response => response.json())
-        .then(json => {
+        if (search.value == "") {
+
+            alert("Пустая строка!");
+
+        } else {
+
+            fetch('js/search.php', {
+                method: "POST",
+                body: JSON.stringify({query: search.value}),
+                headers: {
+                    'Content-type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(json => {
+                
+                let createUl = document.createElement('ul');
+                
+                if (search.value == 'Рубашка' || search.value == 'Платье' || search.value == 'Кофта') {
+
+                    for (let i = 0; i < json.length; i++) {
+                            
+                        createUl.innerHTML += `<li>
+                                                <a href="${json[i].href}">${json[i].text}</a>
+                                                </li>`;
             
-            let createUl = document.createElement('ul');
+                    }
 
-            for (let i = 0; i < json.length; i++) {
-                    
-                createUl.innerHTML += `<li>
-                                        <a href="${json[i].href}">${json[i].text}</a>
-                                        </li>`;
-    
-            }
+                    searchRes.innerHTML = createUl.outerHTML;
+                
+                } else {
 
-            searchRes.innerHTML = createUl.outerHTML;
-            
-        });
+                    createUl.innerHTML = `<li>${json.error}</li>`;
 
+                    searchRes.innerHTML = createUl.outerHTML;
+
+                }
+            });
+        }
     });
 
 }

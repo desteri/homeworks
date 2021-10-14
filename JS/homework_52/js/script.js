@@ -229,9 +229,9 @@ function converterSum() {
 
     "use strict";
 
-    const input = prompt('Введите числа через запятую:', '1, 2, 3'); 
+    const input = prompt('Введите числа через пробел:', '1 2 3'); 
 
-    const arr = input.split(', ').map(Number);
+    const arr = input.split(' ').map(Number);
 
     console.log(arr);
 
