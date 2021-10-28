@@ -1,0 +1,25 @@
+.app-list-item {
+    border: 1px solid #8a9497;
+    padding: 4px 5px;
+    background-color: #fff;
+}
+
+.app-list-item span {
+    cursor: pointer;
+}
+
+.btn-star {
+    color: #ffc107;
+}
+
+.important .btn-star {
+    color: #a8a8a8;
+}
+
+.app-list-item.important .app-list-item-label {
+    color: #ffc107;
+}
+
+.app-list-item.like .heart {
+    color: #bd1414;
+}

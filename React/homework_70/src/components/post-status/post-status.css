@@ -1,0 +1,13 @@
+.btn-group {
+    width: 30%;
+    margin-left: 10px;
+}
+
+.btn-all {
+    width: 30%;
+    background-color: #3f8c99;
+}
+
+.btn-all:hover {
+    background-color: #5ec7da;
+}
